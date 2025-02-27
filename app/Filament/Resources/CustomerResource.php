@@ -35,14 +35,14 @@ class CustomerResource extends Resource
                     ->tel()
                     ->label('Nomor Telepon')
                     ->maxLength(255),
+                Forms\Components\TextInput::make('company')
+                    ->label('Nama Perusahaan')
+                    ->maxLength(255),
                 Forms\Components\Textarea::make('address')
                     ->label('Alamat')
                     ->maxLength(65535)
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('company')
-                    ->label('Nama Perusahaan')
-                    ->maxLength(255),
-            ]);
+            ])->columns(2);
     }
 
     public static function table(Table $table): Table

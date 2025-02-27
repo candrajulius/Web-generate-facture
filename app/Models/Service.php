@@ -14,7 +14,7 @@ class Service extends Model
 
     public function features()
     {
-        return $this->hasMany(Feature::class,'feature_id');
+        return $this->hasMany(Feature::class,'service_id');
     }
 
     public function createInvoice($user_id)
